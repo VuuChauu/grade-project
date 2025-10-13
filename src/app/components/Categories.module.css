@@ -1,0 +1,126 @@
+.mainLayout {
+  display: flex;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+  background-color: #0f0f0f;
+  color: white;
+  min-height: 80vh;
+  border-radius: 8px;
+}
+
+/* Cột bên trái */
+.leftPane {
+  width: 50%;
+  background-color: #151718;
+  padding: 20px;
+  border-right: 1px solid #2b2b2b;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.categoryList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.categoryItem {
+  margin-bottom: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding-left: 8px;
+  /* Giữ vị trí ổn định */
+  border-left: 2px solid transparent;
+  /* Tạo khung sẵn nhưng ẩn */
+  margin-bottom:5px;
+}
+
+.categoryItem:hover {
+  background-color: #1f2022;
+}
+
+.categoryName {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.exerciseList {
+  list-style: none;
+  padding-left: 25px;
+  margin-bottom: 8px;
+  margin-top: 3px;
+}
+
+.exerciseItem {
+  display: block;
+  border-bottom: 1px solid #2c2d2e;
+  padding: 10px;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.exerciseItem:hover {
+  color: #f5d78e;
+}
+
+.exerciseActive {
+  color: #f5d78e;
+
+}
+
+.active {
+  background-color: #1e1f20;
+  border-left-color: #4da3ff;
+  /* Chỉ đổi màu, không thay kích thước */
+}
+
+/* Cột bên phải */
+.rightPane {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 30px;
+}
+
+.rightPane h2,
+.rightPane p {
+  text-align: center;
+}
+
+.placeholder {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 100px;
+}
+
+.exerciseDetail h2 {
+  margin-bottom: 10px;
+}
+
+.exerciseDetail p {
+  color: #ccc;
+}
+
+.actionButtons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.actionButtons button {
+  background-color: #4da3ff;
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.actionButtons button:hover {
+  background-color: #3b84d6;
+}

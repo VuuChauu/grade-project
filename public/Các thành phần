@@ -1,0 +1,14 @@
+			Cấu trúc dự án Next.js
+
+Thư mục:
+	.next: Chứa code “đã được dịch” của Next.js (cái mà browser chạy).
+	public: Chứa static file (CSS/JS/Images).
+	src/app: Chứa source dự án với Next 13 (router).
+Các file quan trọng:
+	.eslintrc.json: Cấu hình ESLint (hiển thị warning ở terminal).
+	.gitignore: Danh sách các file không push lên Git remote.
+	next.config.js: Cấu hình Next.js.
+	package.json: Thông tin về thư viện đã cài đặt.
+	tsconfig.json: Cấu hình compiler của TypeScript.
+	
+	http://localhost:3000/

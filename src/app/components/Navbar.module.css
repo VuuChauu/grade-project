@@ -1,0 +1,107 @@
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #151718;
+  color: white;
+  padding: 10px 24px;
+  font-family: sans-serif;
+}
+
+.left {
+  margin-left: 130px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  cursor: pointer;
+  font-size: 14px;
+  color: #d1d1d1;
+  transition: color 0.2s;
+}
+
+.menu li:hover {
+  color: #f5d78e;
+}
+
+.active {
+  color: #f5d78e;
+  border-bottom: 1px solid #4da3ff;
+  padding-bottom: 2px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-right: 130px;
+}
+
+.searchBox {
+  display: flex;
+  align-items: center;
+  background-color: #1e1f20;
+  border-radius: 6px;
+  padding: 4px 8px;
+}
+
+.searchIcon {
+  color: #8a8a8a;
+  margin-right: 6px;
+}
+
+.searchBox input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ddd;
+  font-size: 13px;
+  width: 160px;
+}
+
+.icon {
+  color: #888;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  background-color: #a77b56;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  cursor: pointer;
+}
