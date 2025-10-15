@@ -1,0 +1,85 @@
+.sidebar {
+  width: 240px;
+  background: #ffffff;
+  border-right: 1px solid #eee;
+  height: 100vh;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #8b5cf6;
+}
+
+.logoIcon {
+  font-size: 1.2rem;
+  margin-right: 4px;
+  
+}
+.searchBox input {
+  width: 100%;
+  padding: 0.5rem 0.7rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  outline: none;
+  background-color: #fff;
+   color: #000;
+}
+
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.section {
+  color: #888;
+  font-size: 15px;
+  margin-top: 1rem;
+  font-weight: 800;
+}
+
+.navItem {
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  color: #333;
+  background-color: #fff;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.navItem:hover {
+  background: #8b5cf6;
+  color: white;
+}
+
+.active {
+  background: #8b5cf6;
+  color: white;
+}
+
+.logoutBtn {
+  margin-top: auto; /* Đẩy nút xuống cuối sidebar */
+  background: #ef4444;
+  color: white;
+  border: none;
+  margin-top: 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.logoutBtn:hover {
+  background: #dc2626;
+}
+
+.Categories .tab{
+  color:#333;
+}

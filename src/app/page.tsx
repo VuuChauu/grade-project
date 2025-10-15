@@ -1,34 +1,63 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
+import Sidebar from "./components/Sidebar";
 import Categories from "./components/Categories";
+import Questions from "./components/Questions";
 
-export default function Home() {
+export default function HomePage() {
   const router = useRouter();
-  const [isClient, setIsClient] = useState(false);
+  const params = useSearchParams();
+  const [isLoading, setIsLoading] = useState(true);
+
+  const isQuestionView = params.get("view") === "question";
 
   useEffect(() => {
-    setIsClient(true); // ✅ đảm bảo chỉ chạy trên client
-
-    const isLoggedIn = localStorage.getItem("isLoggedIn");
-    if (!isLoggedIn) {
-      router.replace("/login"); // 👈 điều hướng nếu chưa đăng nhập
+    const loggedIn = localStorage.getItem("isLoggedIn");
+    if (!loggedIn) {
+      router.push("/login");
+    } else {
+      setIsLoading(false);
     }
   }, [router]);
 
-  if (!isClient) {
-    return null; // 👈 tránh lỗi khi đang render server
-  }
-
-  // ✅ Chỉ hiển thị nội dung khi người dùng đã đăng nhập
-  if (!localStorage.getItem("isLoggedIn")) {
-    return null;
+  if (isLoading) {
+    return (
+      <div
+        style={{
+          minHeight: "100vh",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          background: "#000",
+          color: "#fff",
+          fontFamily: "Calibri, sans-serif",
+        }}
+      >
+        Đang tải...
+      </div>
+    );
   }
 
   return (
-    <div>
-      <Categories />
+    <div
+      style={{
+        display: "flex",
+        minHeight: "100vh",
+        backgroundColor: "#f9fafb",
+        fontFamily: "Calibri, sans-serif",
+      }}
+    >
+      <Sidebar />
+
+      <div style={{ flex: 1, padding: "24px" }}>
+        {!isQuestionView ? (
+          <Categories onViewClick={() => router.push("?view=question")} />
+        ) : (
+          <Questions />
+        )}
+      </div>
     </div>
   );
 }

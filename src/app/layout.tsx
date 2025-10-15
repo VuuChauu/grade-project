@@ -1,17 +1,28 @@
+// app/layout.tsx
 import "./globals.css";
-import type { ReactNode } from "react";
-import LayoutClient from "./layoutClient";
+import type { Metadata } from "next";
 
-export const metadata = {
-  title: "Toph Clone",
-  description: "Trang luyện tập C++ bằng Next.js",
+export const metadata: Metadata = {
+  title: "CodeGrader",
+  description: "Nền tảng học lập trình và chấm bài tự động",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="vi">
-      <body style={{ margin: 0, backgroundColor: "#101112", color: "white" }}>
-        <LayoutClient>{children}</LayoutClient>
+      <body
+        style={{
+          margin: 0,
+          padding: 0,
+          backgroundColor: "#fff",
+          fontFamily: "Calibri, sans-serif",
+        }}
+      >
+        {children}
       </body>
     </html>
   );
