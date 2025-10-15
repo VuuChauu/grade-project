@@ -1,18 +1,17 @@
 import "./globals.css";
-import Navbar from "./components/Navbar";
 import type { ReactNode } from "react";
+import LayoutClient from "./layoutClient";
 
 export const metadata = {
   title: "Toph Clone",
-  description: "Navbar giống Toph - Next.js + CSS thuần",
+  description: "Trang luyện tập C++ bằng Next.js",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="vi">
       <body style={{ margin: 0, backgroundColor: "#101112", color: "white" }}>
-        <Navbar />
-        {children}
+        <LayoutClient>{children}</LayoutClient>
       </body>
     </html>
   );

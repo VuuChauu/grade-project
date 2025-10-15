@@ -1,28 +1,51 @@
 .mainLayout {
   display: flex;
   width: 80%;
-  margin: 0 auto;
-  margin-top: 40px;
-  background-color: #0f0f0f;
-  color: white;
+  margin: 40px auto;
+  background-color: #0d0d0d;
+  color: #e6e6e6;
   min-height: 80vh;
-  border-radius: 8px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Cột bên trái */
+/* Cột bên trái - Sidebar đơn giản, hài hòa */
 .leftPane {
-  width: 50%;
-  background-color: #151718;
+  width: 40%;
+  background-color: #1c1c1c;
   padding: 20px;
   border-right: 1px solid #2b2b2b;
+  border-radius: 20px 0 0 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
+/* Scrollbar gọn */
+.leftPane::-webkit-scrollbar {
+  width: 6px;
+}
+.leftPane::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+.leftPane::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+/* Tiêu đề */
 .title {
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #e0e0e0;
 }
 
+/* Danh sách tuần */
 .categoryList {
   list-style: none;
   padding: 0;
@@ -30,97 +53,196 @@
 }
 
 .categoryItem {
-  margin-bottom: 8px;
+  margin-bottom: 6px;
   cursor: pointer;
-  transition: background-color 0.2s;
-  padding-left: 8px;
-  /* Giữ vị trí ổn định */
+  padding-left: 10px;
   border-left: 2px solid transparent;
-  /* Tạo khung sẵn nhưng ẩn */
-  margin-bottom:5px;
+  border-radius: 6px;
+  transition: background 0.2s, border-color 0.2s;
 }
 
 .categoryItem:hover {
-  background-color: #1f2022;
+  background-color: #2a2a2a;
+  border-left-color: #888;
 }
 
 .categoryName {
   font-weight: 600;
-  font-size: 17px;
+  font-size: 16px;
+  color: #ccc;
 }
 
+/* Danh sách bài tập */
+/* Danh sách bài tập */
 .exerciseList {
   list-style: none;
-  padding-left: 25px;
-  margin-bottom: 8px;
-  margin-top: 3px;
+  padding-left: 18px;
+  margin: 4px 0 8px 0;
 }
 
+/* Mỗi bài tập có ngăn cách */
 .exerciseItem {
-  display: block;
-  border-bottom: 1px solid #2c2d2e;
-  padding: 10px;
+  padding: 8px 10px;
+  margin-left: 4px;
   color: #aaa;
+  border-radius: 6px;
   cursor: pointer;
+  transition: all 0.2s;
+  border-bottom: 1px solid #333; /* ngăn cách */
 }
+
+
 
 .exerciseItem:hover {
-  color: #f5d78e;
+  color: #fff;
+  background-color: #333;
 }
 
 .exerciseActive {
-  color: #f5d78e;
-
+  color: #fff;
+  font-weight: 600;
+  background-color: #444;
 }
 
+
+/* Tuần active */
 .active {
-  background-color: #1e1f20;
-  border-left-color: #4da3ff;
-  /* Chỉ đổi màu, không thay kích thước */
+  border-left-color: #999;
+  background-color: #2a2a2a;
 }
+
+
 
 /* Cột bên phải */
 .rightPane {
   flex: 1;
-  background-color: #1a1a1a;
+  background-color: #1f1e1e;
   padding: 30px;
+  border-radius: 0 20px 20px 0;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  scroll-behavior: smooth;
 }
 
-.rightPane h2,
-.rightPane p {
+.rightPane h2 {
+  margin-bottom: 12px;
+  font-size: 20px;
+  color: #4da3ff;
   text-align: center;
+}
+
+.rightPane p {
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .placeholder {
   text-align: center;
   color: #777;
   font-style: italic;
-  margin-top: 100px;
+  margin-top: 120px;
+  font-size: 16px;
 }
 
-.exerciseDetail h2 {
-  margin-bottom: 10px;
-}
-
-.exerciseDetail p {
-  color: #ccc;
-}
-
+/* 3 nút trên cùng */
 .actionButtons {
-  margin-top: 20px;
+  margin-top: 15px;
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 
 .actionButtons button {
-  background-color: #4da3ff;
+  background: linear-gradient(135deg, #4da3ff, #357ae8);
   border: none;
-  padding: 8px 16px;
+  padding: 10px 20px;
   color: white;
-  border-radius: 6px;
+  font-size: 14px;
+  border-radius: 8px;
   cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 .actionButtons button:hover {
-  background-color: #3b84d6;
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5bb5ff, #478ef5);
+}
+
+/* Khu vực code */
+.codeSection {
+  margin-top: 25px;
+}
+
+.codeEditor {
+  width: 100%;
+  min-height: 220px;
+  background-color: #1c1e21;
+  color: #e6e6e6;
+  font-family: "Fira Code", monospace;
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  outline: none;
+  resize: vertical;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease-in-out;
+}
+
+.codeEditor:focus {
+  box-shadow: 0 0 12px rgba(77, 163, 255, 0.6);
+  background-color: #212326;
+}
+
+/* Nút dưới khu vực code */
+.codeButtons {
+  margin-top: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.codeButtons button {
+  background: linear-gradient(135deg, #4da3ff, #357ae8);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+.codeButtons button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #5bb5ff, #478ef5);
+}
+
+/* Kết quả */
+.outputBox {
+  margin-top: 16px;
+  background-color: #111;
+  padding: 15px;
+  border-radius: 10px;
+  font-family: "Fira Code", monospace;
+  white-space: pre-wrap;
+  color: #a2f7b3;
+  border: 1px solid #333;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+}
+/* Scrollbar gọn */
+.rightPane::-webkit-scrollbar {
+  width: 6px;
+}
+.rightPane::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+.rightPane::-webkit-scrollbar-track {
+  background: #1c1c1c;
 }
