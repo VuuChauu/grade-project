@@ -2,7 +2,7 @@
   width: 240px;
   background: #ffffff;
   border-right: 1px solid #eee;
-  height: 100vh;
+  height: 100%;
   padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;

@@ -1,5 +1,5 @@
 .page {
-  background: #f9fafc;
+    background: linear-gradient(180deg, #b1c5ff, #ececec);
   min-height: 100vh;
   padding: 24px 32px;
   font-family: "Inter", sans-serif;
@@ -14,15 +14,16 @@
 }
 .topBar h2{
     color: #000;
+    text-align: center ;
 }
 
 .backBtn {
   position: absolute;
   left: 0;
-  background: #fff;
+  background: #f2f2f2;
   font-size: 20px;
   border: 1px solid #000000;
-    border-radius: 150px;
+    border-radius: 8px;
   cursor: pointer;
   color: #000;
 }
@@ -37,7 +38,11 @@
 }
 
 .progressInfo {
+  color: #000;
   margin-bottom: 12px;
+}
+.progressInfo p{
+  padding: 5px;
 }
 
 .progressBar {
@@ -166,6 +171,8 @@
   flex-direction: column;
   gap: 16px;
   height: fit-content;
+  color:#000;
+  margin-top: 3.75%;
 }
 
 .statBox {

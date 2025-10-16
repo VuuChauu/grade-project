@@ -51,7 +51,7 @@ export default function HomePage() {
     >
       <Sidebar />
 
-      <div style={{ flex: 1, padding: "24px" }}>
+      <div style={{ flex: 1, padding: "0px" }}>
         {!isQuestionView ? (
           <Categories onViewClick={() => router.push("?view=question")} />
         ) : (

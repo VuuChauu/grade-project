@@ -9,7 +9,7 @@ const classData = [
   { id: 'cpp-advanced', title: "Tuần 3 - Nâng cao", description: "Nâng cao về C++", status: "Draft" },
 ];
 
-export default function Categories({ onViewClick }) { 
+export default function Categories({ onViewClick }) {
   const router = useRouter();
   const [openIndex, setOpenIndex] = useState(null);
   const [shareModal, setShareModal] = useState(false);
@@ -32,9 +32,9 @@ export default function Categories({ onViewClick }) {
     return () => document.removeEventListener("click", handleClickOutside);
   }, []);
 
-  
+
   const handleView = (classId) => {
-    if (onViewClick) onViewClick(); 
+    if (onViewClick) onViewClick();
     else router.push(`/classes/${classId}/questions`);
   };
 
@@ -91,7 +91,7 @@ export default function Categories({ onViewClick }) {
                   className={styles.viewBtn}
                   onClick={() => handleView(item.id)}
                 >
-                  View
+                  Bắt đầu làm bài
                 </button>
 
                 <button
@@ -119,7 +119,7 @@ export default function Categories({ onViewClick }) {
                         setOpenIndex(null);
                       }}
                     >
-                      👁 Chia sẻ lớp học
+                      Chia sẻ lớp học
                     </button>
                     <button className={`${styles.menuItem} ${styles.deleteBtn}`}>🗑 Xóa</button>
                   </div>
